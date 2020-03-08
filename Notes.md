@@ -15,3 +15,12 @@ Since version 3.0, ASP.NET Core does not include EF, so it needs to be installed
 dotnet tool install --global dotnet-ef
 ```
 
+Afterwads, the following two EF commands can be executed from web project root directory to setup the SQLite data store:
+
+```powershell
+// Creating initial migration
+dotnet ef migrations add InitialModel --context AppDbContext -p ../CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj -s CleanArchitecture.Web.csproj -o Data/Migrations
+
+// Applying the migration
+dotnet ef database update -c AppDbContext -p ../CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj -s CleanArchitecture.Web.csproj
+```

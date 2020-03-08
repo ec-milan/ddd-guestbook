@@ -10,7 +10,6 @@
   
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="NETStandard.Library" />

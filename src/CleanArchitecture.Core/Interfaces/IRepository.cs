@@ -5,10 +5,18 @@ namespace CleanArchitecture.Core.Interfaces
 {
     public interface IRepository
     {
-        T GetById<T>(int id) where T : BaseEntity;
-        List<T> List<T>() where T : BaseEntity;
+        #region Methods
+
         T Add<T>(T entity) where T : BaseEntity;
-        void Update<T>(T entity) where T : BaseEntity;
+
         void Delete<T>(T entity) where T : BaseEntity;
+
+        T GetById<T>(int id, string include = null) where T : BaseEntity;
+
+        List<T> List<T>() where T : BaseEntity;
+
+        void Update<T>(T entity) where T : BaseEntity;
+
+        #endregion Methods
     }
 }
